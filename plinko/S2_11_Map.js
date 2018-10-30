@@ -5,6 +5,8 @@ const outputs =[
   [600,.5,16,5]
   ]
 
+const k= 3
+
 const predictionsPoint =300;
 function distance (point) {
   return Math.abs(point -predictionsPoint);
@@ -13,5 +15,9 @@ function distance (point) {
  _.chain(outputs)
   
   .map(row=> [distance(row[0]),row[3]])
+
+  .sortBy(row=>row[0])
+
+  .slice(0,k)
   
   .value();
