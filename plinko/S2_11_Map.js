@@ -19,5 +19,19 @@ function distance (point) {
   .sortBy(row=>row[0])
 
   .slice(0,k)
+
+  .countBy(row=>row[1])
+
+  .toPairs()
+
+  .sortBy(row => row[1] )
+
+  .last()
+
+  .first()
   
-  .value();
+  .parseInt()
+  
+  .value();    
+  
+  
