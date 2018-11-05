@@ -39,27 +39,11 @@ function runAnalysis() {
     
     .value();
 
-     console.log('your point will probably fall into ',bucket);
-     /*console.log(outputs.length);
-     console.log(splitDataset(outputs , (outputs.length/2)  ) )*/
+    console.log('your point will probably fall into ',bucket);    
   
 }
 
 function distance (point) {
   return Math.abs(point -predictionsPoint);
-}
-
-
-function  splitDataset(data , testCount){
-
-  const shuffled =_.shuffle(data); // revuelve los resultados
-                                   // _.shuffle([1, 2, 3, 4]);
-                                  // => [4, 1, 3, 2]
-                                  // 
-  const testSet=_.slice(shuffled,0,testCount) // que tomo , desde , hasta
-  const trainingSet=_.slice(shuffled,testCount) // que tomo , desde 
-
-   return [testSet , trainingSet]
-
 }
 
